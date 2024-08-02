@@ -3,6 +3,8 @@ import java.awt.Dimension;
 
 public class Frame extends JFrame {
 
+    MenuBar menuBar = new MenuBar();
+
     Frame(){
 
         this.setTitle("TicTacToe");
@@ -10,5 +12,7 @@ public class Frame extends JFrame {
         this.setResizable(false);
         this.setSize( new Dimension(420,420));
         this.setVisible(true);
+
+        this.setJMenuBar(menuBar);
     }
 }

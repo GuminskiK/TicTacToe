@@ -10,6 +10,10 @@ public class MenuBar extends JMenuBar {
     MenuBar(){
 
         game.add(newGame);
+        newGame.addActionListener(
+            
+            (e) -> {System.out.println("tworzę nową grę");}
+        );
 
         this.add(game);
         

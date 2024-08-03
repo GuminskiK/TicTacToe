@@ -1,8 +1,10 @@
 public class Main {
-    public static void main(String[] args) {
-        Frame frame = new Frame();
-        Game game = new Game();
 
-        frame.add(game);
+    public static Game currentGame;
+    public static Frame frame;
+
+    public static void main(String[] args) {
+
+        frame = new Frame();
     }
 }

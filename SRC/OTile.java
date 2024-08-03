@@ -3,15 +3,11 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import javax.swing.JButton;
+public class OTile extends Tile {
 
-public class OTile extends JButton {
-
-    int x;
-
-    OTile(int x){
-        this.setBackground(Color.WHITE);
-        this.repaint();
+    OTile(){
+        this.setBackground(Color.BLUE);
+        
     }
 
     @Override
@@ -22,6 +18,6 @@ public class OTile extends JButton {
         g2d.setColor(Color.black);
         g2d.setStroke(new BasicStroke(5));
         
-        g2d.drawOval( (int) (this.getSize().width * 0.1) , (int) (this.getSize().height * 0.1), (int) (this.getSize().width * 0.8), (int) (this.getSize().height * 0.8));  
+        g2d.drawOval( (int) (this.getSize().width * 0.1) , (int) (this.getSize().height * 0.1), (int) (this.getSize().width * 0.8), (int) (this.getSize().height * 0.8));
     }
 }

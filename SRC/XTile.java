@@ -3,22 +3,17 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import javax.swing.JButton;
+public class XTile extends Tile {
 
-public class XTile extends JButton {
+    XTile(){
 
-    int x;
-
-    XTile(int x){
-        this.setBackground(Color.WHITE);
-        this.repaint();
+        this.setBackground(Color.GREEN);
     }
 
     @Override
-    public void paintComponent(Graphics g){
+    public void paint(Graphics g){
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
-        
         g2d.setColor(Color.black);
         g2d.setStroke(new BasicStroke(5));
 

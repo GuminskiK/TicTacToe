@@ -12,10 +12,15 @@ public class MenuBar extends JMenuBar {
         game.add(newGame);
         newGame.addActionListener(
             
-            (e) -> {Main.currentGame = new Game();
-                    Main.frame.add(Main.currentGame);
-                    Main.frame.paintAll(getGraphics());
-                    System.out.println("Gra została utworzona");}
+            (e) -> {    if (Main.currentGame != null){
+                            Main.frame.remove(Main.currentGame);
+                        }
+
+                        Main.currentGame = new Game();
+                        Main.frame.add(Main.currentGame);
+                        Main.frame.paintAll(getGraphics());
+                        System.out.println("Gra została utworzona");    
+                    }
         );
 
         this.add(game);
